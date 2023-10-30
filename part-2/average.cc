@@ -1,4 +1,7 @@
-// TODO: Add the required header
+//Adrian Butrus 
+//adrianbutrus6@csu.fullerton.edu
+//@adrianbutrus2
+//Partner:@ericklrobles
 
 #include <iostream>
 #include <string>
