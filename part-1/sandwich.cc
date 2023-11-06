@@ -1,7 +1,7 @@
-//Adrian Butrus 
-//adrianbutrus6@csu.fullerton.edu
-//@adrianbutrus2
-//Partner:@ericklrobles
+// Adrian Butrus
+// adrianbutrus6@csu.fullerton.edu
+// @adrianbutrus2
+// Partners:@ericklrobles
 
 #include <iostream>
 #include <string>
@@ -19,8 +19,8 @@ int main(int argc, char* argv[]) {
   std::string bread = arguments[2];
   std::string condiment = arguments[3];
 
-
-  std::cout << "Your order: A " << protein << " sandwich on " << bread << " with " << condiment << ".\n";
+  std::cout << "Your order: A " << protein << " sandwich on " << bread
+            << " with " << condiment << ".\n";
 
   return 0;
 }

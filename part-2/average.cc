@@ -1,7 +1,7 @@
-//Adrian Butrus 
-//adrianbutrus6@csu.fullerton.edu
-//@adrianbutrus2
-//Partner:@ericklrobles
+// Adrian Butrus
+// adrianbutrus6@csu.fullerton.edu
+// @adrianbutrus2
+// Partners:@ericklrobles
 
 #include <iostream>
 #include <string>
@@ -10,25 +10,24 @@
 int main(int argc, char* argv[]) {
   std::vector<std::string> arguments{argv, argv + argc};
 
-if (arguments.size() <= 1) {
-  std::cerr << "error: please provide at least one command line argument.\n";
-}
-
-double sum = 0.0; 
-
-for (int i = 1; i < arguments.size(); ++i) {
-    try {
-      double number = std::stod(arguments[i]);
-      sum += number;
-      } catch (const std::invalid_argument& e) {
-      std::cerr << "Error: Invalid argument - " << arguments[i] << "\n";
-      return 1;
-      }
+  if (arguments.size() <= 1) {
+    std::cout << "error: you must supply at least one number\n";
+    return 1;
   }
 
-int numArgs = arguments.size() - 1;
-  double average = sum / numArgs;
-  std::cout << "average = " << average << "\n";
+  double sum{0.0};
+  bool none{true};
 
+  for (std::string& argument : arguments) {
+    if (none) {
+      none = false;
+      continue;
+    }
+    sum += stod(argument);
+  }
+
+  int num_args{static_cast<int>(arguments.size() - 1)};
+  double average = sum / num_args;
+  std::cout << "average = " << average << "\n";
   return 0;
 }
