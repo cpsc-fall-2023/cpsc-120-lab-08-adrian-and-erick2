@@ -16,6 +16,9 @@
     
   "githubPullRequests.ignoredPullRequestBranches": [
     "main"
-  ]
+  ],
+  "files.associations": {
+    "iostream": "cpp"
+  }
 }
 
